@@ -140,7 +140,7 @@ with tab1:
     total_customers = len(df)
 
     churn_rate = (
-        df["Churn"].value_counts(normalize=True).iloc[1] * 100
+        df["Churn"].value_counts(normalize=True).iloc[1] * 80
     )
 
     avg_monthly = df["MonthlyCharges"].mean()
