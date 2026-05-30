@@ -116,7 +116,10 @@ model_columns = joblib.load("models/model_columns.pkl")
 # =====================================
 # HEADER
 # =====================================
-st.title("📊 Customer Churn Prediction") 
+st.markdown(
+    "<h4 style='text-align:left;'>📊 Customer Churn Prediction</h4>",
+    unsafe_allow_html=True
+)
 st.markdown(""" Predict telecom customer churn using Machine Learning.""")
 # st.divider()
 
