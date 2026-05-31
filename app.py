@@ -83,6 +83,17 @@ header {
     font-size:18px;
     font-weight:bold;
 }
+            [data-testid="metric-container"] {
+    padding: 10px;
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 22px !important;
+}
+
+[data-testid="stMetricLabel"] {
+    font-size: 14px !important;
+}
 
 </style>
 """, unsafe_allow_html=True)
@@ -117,7 +128,7 @@ model_columns = joblib.load("models/model_columns.pkl")
 # HEADER
 # =====================================
 st.markdown(
-    "<h4 style='text-align:left;'>📊 Customer Churn Prediction</h4>",
+    "<h2 style='text-align:left;'>📊 Customer Churn Prediction</h2>",
     unsafe_allow_html=True
 )
 st.markdown(""" Predict telecom customer churn using Machine Learning.""")
@@ -140,7 +151,7 @@ with tab1:
     total_customers = len(df)
 
     churn_rate = (
-        df["Churn"].value_counts(normalize=True).iloc[1] * 80
+        df["Churn"].value_counts(normalize=True).iloc[1] * 100
     )
 
     avg_monthly = df["MonthlyCharges"].mean()
@@ -463,10 +474,6 @@ st.markdown("""
 <div style='text-align:center;color:#94a3b8;'>
 
 🚀 Customer Churn Prediction System
-
-Built using Machine Learning, Streamlit and Plotly
-
-Data Science Internship Project
 
 </div>
 """, unsafe_allow_html=True)
