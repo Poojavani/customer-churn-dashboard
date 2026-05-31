@@ -128,10 +128,12 @@ model_columns = joblib.load("models/model_columns.pkl")
 # HEADER
 # =====================================
 st.markdown(
-    "<h2 style='text-align:left;'>📊 Customer Churn Prediction</h2>",
+    "<h2 style='text-align:left;'>📊 Churn Dashboard</h2>",
     unsafe_allow_html=True
 )
-st.markdown(""" Predict telecom customer churn using Machine Learning.""")
+st.markdown("""AI-Powered Telecom Customer Analytics""")
+
+
 # st.divider()
 
 # =====================================
@@ -160,8 +162,7 @@ with tab1:
 
     st.subheader("Business Overview")
 
-    col1, col2 = st.columns(2)
-
+    col1, col2 = st.columns([1,1], gap="small")
     with col1:
         st.metric(
             "👥 Total Customers",
